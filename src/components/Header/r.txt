@@ -1,0 +1,171 @@
+import React, { useState } from "react";
+
+const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form Data:", formData);
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+  };
+
+  return (
+
+<div className="flex flex-col justify-center bg-[url('https://files.123freevectors.com/wp-content/original/110497-blue-blurred-background-vector.jpg')] items-center  min-h-screen px-4">
+      <div className="bg-[url('https://mobilesolutions.pt/wp-content/uploads/2016/02/Silver-Blur-Background-Wallpaper.jpg')] m-4 shadow-lg rounded-lg p-6 w-full max-w-3xl">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+          Contact Us
+        </h2>
+        <p className="text-center text-gray-600 mb-6">
+          We’d love to hear from you! Whether you have questions, need to
+          schedule an appointment, or require urgent care, our team is here to
+          assist.
+        </p>
+
+        {/* Contact Details */}
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-gray-700">Get in Touch</h3>
+          <ul className="text-gray-600 space-y-2 mt-2">
+            <li>
+              📍 <strong>Address:</strong> 123 Smile Street, Toothville, TX
+              75001
+            </li>
+            <li>
+              📞 <strong>Phone:</strong> +1 (555) 123-4567
+            </li>
+            <li>
+              📧 <strong>Email:</strong> contact@yourdentalpractice.com
+            </li>
+          </ul>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-gray-700">Office Hours</h3>
+          <ul className="text-gray-600 space-y-2 mt-2">
+            <li>
+              <strong>Monday to Friday:</strong> 9:00 AM - 5:00 PM
+            </li>
+            <li>
+              <strong>Saturday:</strong> 10:00 AM - 2:00 PM
+            </li>
+            <li>
+              <strong>Sunday:</strong> Closed
+            </li>
+          </ul>
+        </div>
+
+        <div className="mb-6 text-center">
+          <button className="bg-indigo-600 text-white py-2 px-4 rounded-md shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Schedule Online
+          </button>
+          <p className="text-gray-600 mt-2">or call us today!</p>
+        </div>
+
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-gray-700">Follow Us</h3>
+          <div className="flex space-x-4 mt-2">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              Twitter
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 hover:underline"
+            >
+              Instagram
+            </a>
+          </div>
+        </div>
+
+        {/* Contact Form */}
+        
+      </div>
+    </div>
+
+
+
+
+
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+      <div className="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+        <h2 className="text-2xl font-bold text-gray-200 mb-4">Contact Form</h2>
+
+        <form className="flex flex-wrap" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            placeholder="Full Name"
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] mr-[2%]"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full md:w-[48%] ml-[2%]"
+            required
+          />
+          <input
+            type="number"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Phone Number"
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full"
+            required
+          />
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Message"
+            className="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 w-full h-32"
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150 w-full"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default ContactUs;
