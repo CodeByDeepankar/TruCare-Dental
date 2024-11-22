@@ -3,9 +3,9 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, XMarkIcon, BellIcon } from "@heroicons/react/24/outline";
 
 const navLinks = [
-  { label: "Home", path: "/" },
-  { label: "About", path: "/About" },
-  { label: "Contact Us", path: "/Contact" },
+  { label: "Home", path: "/TruCare-Dental" },
+  { label: "About", path: "/TruCare-Dental/About" },
+  { label: "Contact Us", path: "/TruCare-Dental/Contact" },
 ];
 
 function combineClasses(...classes) {
@@ -30,7 +30,7 @@ export default function Navbar() {
           {/* Logo and Navigation Links */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
-              <img className="h-8 w-auto" src="./public/logo.webp" alt="Your Company Logo" />
+              <img className="h-8 w-auto" src="https://i.ibb.co/GJVVhyR/logo.webp" alt="Your Company Logo" />
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
