@@ -10,9 +10,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/TruCare-Dental" element={<Home />} />
-        <Route path="/TruCare-Dental/About" element={<About />} />
-        <Route path="/TruCare-Dental/Contact" element={<Contact />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter >
