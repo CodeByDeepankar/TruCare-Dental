@@ -30,7 +30,8 @@ export default function Navbar() {
           {/* Logo and Navigation Links */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
-              <img className="h-8 w-auto" src="https://i.ibb.co/GJVVhyR/logo.webp" alt="Your Company Logo" />
+              <a href="/TruCare-Dental/"><img className="h-8 w-auto" src="https://i.ibb.co/GJVVhyR/logo.webp" alt="Your Company Logo" /></a>
+              
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
