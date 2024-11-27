@@ -30,7 +30,7 @@ export default function Navbar() {
           {/* Logo and Navigation Links */}
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 border-none">
-              <a href="/"><img className="h-8 w-auto" src="https://i.ibb.co/GJVVhyR/logo.webp" alt="Your Company Logo" /></a>
+              <Link to={"/"}><img className="h-8 w-auto" src="https://i.ibb.co/GJVVhyR/logo.webp" alt="Your Company Logo" /></Link>
               
             </div>
             <div className="hidden sm:ml-6 sm:block">
